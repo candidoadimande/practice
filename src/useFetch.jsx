@@ -6,11 +6,11 @@ export default function useFetch(url) {
   useEffect(() => {
     setTimeout(() => {
       fetch(url)
-      .then( res => {
+       .then( res => {
         if(!res.ok) {
           throw Error("Could not fetch the data for that resource.")
         }
-        return res.json();
+        return res.json();|
       })
       .then(data => {
         setData(data);
